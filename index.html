@@ -1,58 +1,279 @@
-```html
+ 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EctoClean Academy</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #22c55e;
+      --accent-dark: #16a34a;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
 
-    <title>Planta VC Brairot</title>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #101510;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 700px;
-            padding: 40px;
-            text-align: center;
-            background: #182018;
-            border-radius: 20px;
-        }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
 
-        h1 {
-            color: #63ff8a;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
 
-        p {
-            color: #c8c8c8;
-        }
-    </style>
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .target {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .target-item strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--accent-dark);
+    }
+
+    .target-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      padding: 0.85rem 1.8rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>🌱 Planta VC Brairot</h1>
+  <header>
+    <div class="badge">Science-Based • Home Training • Anti-Acne</div>
+    <h1>EctoClean Academy</h1>
+    <p>Clean nutrition + evidence-based home workouts designed for ectomorphs who want real results and clear skin.</p>
+    <a href="#features" class="btn">Explore Features</a>
+  </header>
 
-        <p>
-            Sistema de teste de compra de plantas.
-        </p>
+  <div class="container">
 
-        <p>
-            O código Roblox está disponível no arquivo
-            <strong>server.lua</strong>.
-        </p>
-    </div>
+    <section>
+      <h2>Built for</h2>
+      <div class="target">
+        <div class="target-item">
+          <strong>15 years</strong>
+          <span>Age</span>
+        </div>
+        <div class="target-item">
+          <strong>Ectomorph</strong>
+          <span>Body Type</span>
+        </div>
+        <div class="target-item">
+          <strong>51 kg</strong>
+          <span>Starting Weight</span>
+        </div>
+        <div class="target-item">
+          <strong>Home Only</strong>
+          <span>Training Location</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Main Features</h2>
+      <div class="features">
+
+        <div class="card">
+          <div class="icon">📅</div>
+          <h3>Daily Routine</h3>
+          <p>Automated schedule with breakfast, lunch, dinner, snacks and workout times. Fully editable.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🥗</div>
+          <h3>Anti-Acne Nutrition</h3>
+          <p>Only clean, non-ultra-processed foods. Every suggestion is non-comedogenic and science-backed.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚖️</div>
+          <h3>Nutrition Calculator</h3>
+          <p>Enter any food + grams or kilograms and get the full nutritional breakdown instantly.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📓</div>
+          <h3>Permanent Food Diary</h3>
+          <p>Register everything you eat. History stays forever. Daily macros and calendar view included.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛒</div>
+          <h3>Smart Shopping List</h3>
+          <p>Auto-generated list with product images, quantities and real-time price calculation in R$.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💪</div>
+          <h3>Home Workouts</h3>
+          <p>Progressive 4-week plans covering all major muscle groups. Bodyweight + minimal equipment.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🕒</div>
+          <h3>Brasília Clock</h3>
+          <p>Real-time clock showing day, month, year and exact Brasília time on every screen.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Progress Tracking</h3>
+          <p>Weight, measurements, photos and strength logs to track real results over time.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Files</h2>
+      <div class="features">
+        <div class="card">
+          <h3>README.md</h3>
+          <p>Full project documentation, features list, tech stack and roadmap.</p>
+        </div>
+        <div class="card">
+          <h3>index.html</h3>
+          <p>This landing page — clean overview of the app concept and features.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p><strong>EctoClean Academy</strong> — Build muscle. Keep your skin clear. Stay consistent.</p>
+    <p style="margin-top: 0.5rem;">Educational project • 2026</p>
+  </footer>
 
 </body>
 </html>
-```
